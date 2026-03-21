@@ -1,37 +1,169 @@
-/* RESET BÁSICO */
+/*inicio actividad*/
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-
-/* BODY GENERAL */
 body {
-  background-color: #7e01af;
-  color: #333;
-  line-height: 1.6;
-  font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
-  text-align: center;
+  background: #ffff;
+  font-family: "open Sans", sans-serif, Arial;
+  font-size: 16px;
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: auto;
+}
+/* header */
+header {
+  background-image: linear-gradient(#1e2838 30%, #3c5171 90%);
+  background-size: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* HEADER */
-header {
-  background: #aaff00;
-  color: rgb(231, 0, 0);
-  padding: 20px;
-  font-family: 'Coral Pixels', serif;
+/* estilo al meno */
+
+header .menu {
+  margin: 3px;
+  text-align: center;
+
 }
+
+header .menu a{
+    background: none;
+    margin: 0 20px;
+    color: #fff;
+    padding: 5px;
+    font-size: 1em;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+header .menu a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+/* texto */
+header .container-text{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 50px 0 150px;
+}
+header .container-text .text {
+  background-color: #101c33;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 3px;
+  
+  text-align: center;
+  width: 90%;
+  padding: 20px;
+  max-width: 1000px;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .container-text img{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.4);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+header .container-text .text h1,
+header .container-text .text h2,
+header .container-text .text button{
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
+}
+
+header .container-text .text .name {
+  margin-bottom: 10px;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+header .container-text .text .profession {
+ font-size: 25px;
+ line-height: 25px;
+ margin-bottom: 40px;
+ font-family: 'Audiowide', sans-serif;
+}
+
+header .container-text .text .btn-cv{
+  background: #a93226;
+  color: white;
+  cursor: pointer;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  margin-top:10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/*interaccion de descarga al curriculum*/
+header .container-text .text .btn-cv:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255,255,255,0.5),
+  0 0 20px rgba(255,255,255,0.2);
+  outline-offset: 15px;
+  outline-color: rgba(255,255,255,0);
+  text-shadow: 1px 1px 2px #427388;
+}
+
+/* brillo que cruza el boton */
+header .container-text .text .btn-cv::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+/* animacion al pasar el mouse */
+header .container-text .text .btn-cv:hover::before{
+  left: 120%;
+}
+
+/* leve elevacion */
+header .container-text .text .btn-cv:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/*FIN DE PETICIONES DEL PROFE */
+
+/*MIS CONFIG*/
 
 /* NAVBAR */
 nav {
-  background: linear-gradient(135deg, #6a00ff, #a100ff);
-  padding: 12px 0;
+  background: linear-gradient(to right, #1e2838, #3c5171);
+  padding: 3px 0;
   font-family: "Audiowide", sans-serif;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  width: 80%;
+  width: 100%;
   margin: 20px auto;
   border-radius: 0.3cm;
 }
@@ -44,18 +176,18 @@ nav {
   gap: 40px;
 }
 
-/* LINKS */
+/* LINKS EFECTO MMON*/
 .menu a{
   text-decoration: none;
   color: white;
   font-weight: bold;
   padding: 10px 18px;
   border-radius: 6px;
-  transition: all 0.25s ease;
   position: relative;
+  transition: all .25s ease;
 }
 
-/* EFECTO HOVER */
+/* EFECTO HOVER PARA MI LINEA ANIMADA*/
 .menu a:hover{
   background: rgba(255,255,255,0.15);
   transform: translateY(-2px);
@@ -67,10 +199,10 @@ nav {
   position: absolute;
   left: 0;
   bottom: -4px;
-  width: 0%;
+  width: 0;
   height: 2px;
   background: #aaff00;
-  transition: width 0.3s;
+  transition: width .3s;
 }
 
 .menu a:hover::after{
@@ -87,7 +219,8 @@ nav {
   background: transparent;
 }
 
-@media (max-width:700px){
+/* RESPONSIVE MENU */
+@media (max-width:600px){
 
   .menu-toggle{
     display:block;
@@ -110,7 +243,9 @@ nav {
 
 /* CONTENIDO PRINCIPAL */
 main {
-  width: 80%;
+  width: 65%;
+  max-width: 1100px;
+  min-width: 300px;
   margin: 20px auto;
   padding: 20px;
   background: white;
@@ -123,6 +258,7 @@ section {
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
+  text-align: justify;
 }
 
 section:last-child {
@@ -184,40 +320,25 @@ button[type="submit"] {
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 button[type="submit"]:hover {
   background: #555;
 }
 
-/* ASIDE */
-aside {
-  background: #ddd;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-/* FOOTER */
-footer {
-  background: #95ff00;
-  padding: 10px;
-  margin-top: 20px;
-  font-family: 'Coral Pixels', serif;
-}
-
 /*mis h3 que son subtitulos*/
 h3 {
   font-family: 'Coral Pixels', serif;
+  text-align: center;
+  margin: 20px 0;
 }
 
 /*LOS CONTAINER JOBS, COLUMNAS DE 3, 2 Y 1 JOB*/
-
 .container-jobs,
-.container-skills
-{
+.container-skills{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   gap: 30px;
   justify-items: center;
 }
@@ -226,25 +347,16 @@ h3 {
 .job{
   text-align: center;
   max-width: 300px;
-
 }
 
 .thumb img{
   width: 100%;
   height: auto;
-  border-radius: 8px;
-}
-
-/*la vdd no se si hay forma mas eficiente de hacer esto*/
- @media (max-width:900px){
-  .container-jobs{
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /* CELULARES */
-@media (max-width:500px){
-  .container-jobs{
-    grid-template-columns: 1fr;
+@media (max-width:700px){
+  main{
+    width: 90%;
   }
 }
