@@ -195,9 +195,337 @@ main #section-about .text .bold {
   text-decoration: underline;
 }
 
+/* estilo trabajos */
+main #section-jobs{
+  background: #f2f2f2;
+  padding: 60px 0;
+}
+
+main #section-jobs .container{
+  overflow: hidden;
+}
+
+/*LOS CONTAINER JOBS, COLUMNAS DE 3, 2 Y 1 JOB*/
+.container-jobs,
+.container-skills{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/*TARJETAS DE TRABAJOS/JOBS*/
+.job{
+  text-align: center;
+  max-width: 300px;
+}
+
+.thumb{
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main #section-jobs .container-jobs .job:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+/*estilo a la descripcion de cada trabajo*/
+main #section-jobs .container-jobs .job .description{
+  text-align: center;
+}
+
+main #section-jobs .container-jobs .job .description .name{
+  font-weight: 700;
+  color: #3895ea;
+  margin-bottom: 10px;
+}
+
+main #section-jobs .container-jobs .job .description .category {
+  font-size: 14px;
+  color: #5a5a5a;
+}
+
+/*estilo a la seccion de habilidades*/
+main #section-skills{
+  padding: 60px 0;
+}
+
+main #section-skills .title {
+  font-size: 34px;
+  margin-bottom: 60px;
+  line-height: 34px;
+  font-weight: 300;
+  color: #dd820d;
+  text-align: center;
+}
+
+main #section-skills .container-skills .skill .icon-skill{
+  padding: 0px 5px;
+  width: 50%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+main #section-skills .container-skills .skill .icon-skill i{
+  width: 100%;
+  font-size: 40px;
+  transition: all 0.75s;
+}
+
+main #section-skills .container-skills .skill .icon-skill i:hover{
+  
+  transform: rotate(360deg);
+}
+
+main #section-skills .container-skills .skill .description{
+  align-items: right;
+  width: 100%;
+}
+
+main #section-skills .container-skills .skill .description .name{
+  font-weight: 700;
+  color: #3895ea;
+}
+
+main #section-skills .container-skills .skill .description .category{
+  font-size: 14px;
+  color: #5a5a5a;
+}
+
+/*footer*/
+footer {
+  background: #f2f2f2;
+  color: #fff;
+  padding: 0px 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+footer #section-contact {
+  padding: 60px 0;
+}
+
+footer #section-contact .form-message {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+footer #section-contact .form-message input[type="text"],
+footer #section-contact .form-message input[type="email"],
+footer #section-contact .form-message textarea {
+  border:2px solid #cecece;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 20px;
+  color: #a4a4a4;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+footer #section-contact .form-message textarea {
+  border:2px solid #cecece;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 20px;
+  color: #a4a4a4;
+}
+
+footer #section-contact .form-message textarea {
+  width: 100%;
+  height: 100px;
+  min-width: 100%;
+  margin-bottom: 15px;
+  min-height: 100px;
+  max-height: 300px;
+}
+
+footer #section-contact .form-message .btn-send-msg{
+  margin:auto;
+  background: #3895ea;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 15px 40px;
+}
+
+footer #section-contact .form-message .btn-send-msg:hover{
+  background: #3895ea;
+  
+}
+
+/*redes sociales en el footer*/
+footer #section-social-media {
+  background-image: linear-gradient(#1e2838 50%, #3c5171 90%);
+  padding: 60px 0;
+}
+
+footer #section-social-media .container {
+  display: flex;
+  justify-content: center;
+  gap:20;
+}
+
+footer #section-social-media .container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  font-size: 30px;
+  color: white;
+
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+#section-social-media .container a i{
+  font-size: 28px;
+}
+
+#section-social-media .facebook i{
+  color:#1877f2;
+}
+
+#section-social-media .youtube i{
+  color:#ff0000;
+}
+
+#section-social-media .github i{
+  color:#333;
+}
+
+#section-social-media .facebook:hover{
+  background:#1877f2;
+}
+
+#section-social-media .youtube:hover{
+  background:#ff0000;
+}
+
+#section-social-media .github:hover{
+  background:#333;
+}
+
+#section-social-media a:hover i{
+  color:white;
+}
+
+footer #section-social-media .container a i{
+  font-size: 40px;
+  transition: transform 0.75s;
+}
+
+
+/* BARRA FLOTANTE O TOOLTIP*/
+/* BARRA SOCIAL FLOTANTE */
+
+.social-bar{
+  position: fixed;
+  left: 0;
+  top: 30%;
+  width: 50px;
+  z-index: 1000;
+}
+
+/* ocultar checkbox */
+#toggle-social{
+  display:none;
+}
+
+/* boton toggle */
+.toggle-btn{
+  display:block;
+  text-align:center;
+  color:#49b0e6;
+  font-size:14px;
+  margin-bottom:5px;
+  cursor:pointer;
+  transform: rotate(180deg);
+  transition:0.4s;
+}
+
+#toggle-social:checked + .toggle-btn{
+  transform: rotate(0deg);
+}
+
+/* contenedor iconos */
+
+.social-icons{
+  transition:0.4s;
+  transform: translateX(0);
+  box-shadow:0 1px 10px rgba(0,0,0,0.3);
+}
+
+#toggle-social:checked ~ .social-icons{
+  transform: translateX(-100%);
+  box-shadow:none;
+}
+
+/* enlaces */
+
+.social-icons a{
+  display:block;
+  width:50px;
+  height:50px;
+  line-height:50px;
+  text-align:center;
+  color:white;
+  font-size:20px;
+  position:relative;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  background:#1c1c1c;
+}
+
+/* colores */
+
+.facebook{background:#3b5998;}
+.youtube{background:#e52a23;}
+.github{background:#333;}
+
+.facebook{border-radius:0 5px 0 0;}
+.github{border-radius:0 0 5px 0;}
+
+/* tooltip */
+
+.tooltip{
+  position:absolute;
+  background:#1c1c1c;
+  padding:4px 8px;
+  border-radius:3px;
+  font-size:14px;
+  top:12px;
+  left:0;
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s;
+}
+
+.social-icons a:hover .tooltip{
+  left:60px;
+  opacity:1;
+  visibility:visible;
+}
+
+
 /*FIN DE PETICIONES DEL PROFE */
-
-
 
 
 
@@ -325,56 +653,6 @@ ul {
   text-align: left;
 }
 
-/* IMÁGENES */
-img {
-  display: block;
-  margin: 15px auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* FORMULARIO */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 500px;
-  margin: auto;
-}
-
-label {
-  font-weight: bold;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: #333;
-}
-
-button[type="submit"] {
-  align-self: center;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 8px;
-  background: #333;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: .3s;
-}
-
-button[type="submit"]:hover {
-  background: #555;
-}
 
 /*mis h3 que son subtitulos*/
 h3 {
@@ -383,25 +661,6 @@ h3 {
   margin: 20px 0;
 }
 
-/*LOS CONTAINER JOBS, COLUMNAS DE 3, 2 Y 1 JOB*/
-.container-jobs,
-.container-skills{
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 30px;
-  justify-items: center;
-}
-
-/*TARJETAS DE TRABAJOS/JOBS*/
-.job{
-  text-align: center;
-  max-width: 300px;
-}
-
-.thumb img{
-  width: 100%;
-  height: auto;
-}
 
 /* CELULARES */
 @media (max-width:700px){
