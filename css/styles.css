@@ -300,6 +300,13 @@ main #section-skills .container-skills .skill .description .category{
   color: #5a5a5a;
 }
 
+.container-skills{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
 /*footer*/
 footer {
   background: #f2f2f2;
